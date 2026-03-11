@@ -29,7 +29,7 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
-            for event in pygame.event.get():
+            for event in pygame.event.get(): # close window
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
