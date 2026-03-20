@@ -2,11 +2,37 @@ import pygame
 
 # C
 C_BROWN = (74, 53, 26)
+C_CYAN = (0, 128, 128)
+C_GREEN = (0, 128, 0)
 C_ORANGE = (255, 128, 0)
 C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 255, 102)
 
 # E
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'MenuBg0': 0,
+    'MenuBg1': 0,
+    'MenuBg2': 0,
+    'MenuBg3': 0,
+    'MenuBg4': 0,
+    'MenuBg5': 0,
+    'MenuBg6': 0,
+    'MenuBg7': 0,
+    'Player1': 1,
+    'Player1Shot': 25,
+    'Player2': 1,
+    'Player2Shot': 20,
+    'Enemy1': 1,
+    'Enemy1Shot':20,
+    'Enemy2': 1,
+    'Enemy2Shot': 15,
+}
+
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 1,
@@ -62,6 +88,30 @@ ENTITY_HEALTH = {
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1
+}
+
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'MenuBg0': 0,
+    'MenuBg1': 0,
+    'MenuBg2': 0,
+    'MenuBg3': 0,
+    'MenuBg4': 0,
+    'MenuBg5': 0,
+    'MenuBg6': 0,
+    'MenuBg7': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Player2': 0,
+    'Player2Shot': 0,
+    'Enemy1': 100,
+    'Enemy1Shot': 0,
+    'Enemy2': 125,
+    'Enemy2Shot': 0,
 }
 
 ENTITY_SHOT_DELAY = {
