@@ -4,29 +4,36 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTIONS, C_WHITE, C_YELLOW
+from code.Const import WIN_WIDTH, MENU_OPTIONS, C_WHITE, C_YELLOW, C_BROWN
+from code.Entity import Entity
+from code.EntityFactory import EntityFactory
 
 
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/MenuBg.png').convert_alpha()
-        self.rect = self.surf.get_rect(left=0, top=0)
+        self.entity_list: list[Entity] = []
+        self.entity_list.extend(EntityFactory.get_entity('MenuBg'))
+
 
     def run(self, ):
         menu_option = 0
-        pygame.mixer_music.load('./asset/Menu.mp3')
+        pygame.mixer_music.load('./asset/Menu.wav')
         pygame.mixer_music.play(-1)
+        clock = pygame.time.Clock()
         while True:
+            clock.tick(60)
             #DRAW IMAGES
-            self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(60, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
-            self.menu_text(60, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
+            for ent in self.entity_list:
+                self.window.blit(source=ent.surf, dest=ent.rect)
+                ent.move()
+
+            self.menu_text(60, "WASTELAND", C_BROWN, ((WIN_WIDTH / 2), 70))
+            self.menu_text(60, "Shooter", C_BROWN, ((WIN_WIDTH / 2), 120))
 
             for i in range(len(MENU_OPTIONS)):
                 if i == menu_option:
                     self.menu_text(30, MENU_OPTIONS[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
-
                 else:
                     self.menu_text(30, MENU_OPTIONS[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
 

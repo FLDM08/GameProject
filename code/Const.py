@@ -1,6 +1,7 @@
 import pygame
 
 # C
+C_BROWN = (74, 53, 26)
 C_ORANGE = (255, 128, 0)
 C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 255, 102)
@@ -14,7 +15,15 @@ ENTITY_SPEED = {
     'Level1Bg4': 4,
     'Level1Bg5': 5,
     'Level1Bg6': 6,
-    'Player1': 3,
+    'MenuBg0': 0,
+    'MenuBg1': 1,
+    'MenuBg2': 1.5,
+    'MenuBg3': 2,
+    'MenuBg4': 2.5,
+    'MenuBg5': 3,
+    'MenuBg6': 3.5,
+    'MenuBg7': 4,
+    'Player1': 4.5,
     'Player1Shot': 1,
     'Player2': 3,
     'Player2Shot': 3,
@@ -37,6 +46,14 @@ ENTITY_HEALTH = {
     'Level2Bg2': 999,
     'Level2Bg3': 999,
     'Level2Bg4': 999,
+    'MenuBg0': 999,
+    'MenuBg1': 999,
+    'MenuBg2': 999,
+    'MenuBg3': 999,
+    'MenuBg4': 999,
+    'MenuBg5': 999,
+    'MenuBg6': 999,
+    'MenuBg7': 999,
     'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
